@@ -1,4 +1,4 @@
-FROM ghcr.io/uommscrobotics/sfr_ros2_arm64:latest
+FROM ghcr.io/uommscrobotics/sfr_ros2:arm64
 LABEL authors="Murilo Marinho"
 
 ENTRYPOINT ["/bin/bash", "-c"]
