@@ -1,19 +1,11 @@
 # SFR Gazebo
 
-## Download
-
-```commandline
-mkdir -p ~/git
-cd ~/git
-git clone https://github.com/UoMMScRobotics/SFR_Gazebo.git
-```
-
-## Run
-
 Always use this command to prevent inaccessible containers.
 
 ```commandline
+mkdir -p ~/git/SFR_Gazebo
 cd ~/git/SFR_Gazebo
+wget https://raw.githubusercontent.com/UoMMScRobotics/SFR_Gazebo/refs/heads/main/compose.yml
 xhost +
 docker compose down --remove-orphans
 docker compose run gazebo "gz sim"
