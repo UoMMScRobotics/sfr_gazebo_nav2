@@ -5,6 +5,3 @@ ENTRYPOINT ["/bin/bash", "-c"]
 
 RUN wget https://raw.githubusercontent.com/UoMMScRobotics/SFR_Gazebo/refs/heads/main/install_gazebo.sh && rm -rf /var/cache/apt/archives /var/lib/apt/lists/*
 RUN chmod +x install_gazebo.sh && bash -c "./install_gazebo.sh"
-
-USER ubuntu
-WORKDIR /home/ubuntu
