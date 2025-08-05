@@ -14,11 +14,7 @@ env:
 # There is a single job in this workflow. It's configured to run on the latest available version of Ubuntu.
 jobs:
   build-and-push-image:
-    strategy:
-      fail-fast: false
-      matrix:
-        os: ['ubuntu-24.04-arm', 'ubuntu-latest']
-    runs-on: ${{ matrix.os }}
+    runs-on: 'ubuntu-latest'
     # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
     permissions:
       contents: read
@@ -42,7 +38,6 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Build and push Docker images amd64
-        if: matrix.os == 'ubuntu-latest'
         id: push_amd64
         uses: docker/build-push-action@v6
         with:
@@ -50,13 +45,3 @@ jobs:
           file: amd64/Dockerfile
           push: true
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-
-      - name: Build and push Docker image arm64
-        if: matrix.os == 'ubuntu-24.04-arm'
-        id: push_arm64
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          file: arm64/Dockerfile
-          push: true
-          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:arm64
