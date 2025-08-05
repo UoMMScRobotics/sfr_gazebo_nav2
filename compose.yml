@@ -6,7 +6,7 @@ services:
       privileged: true # Needed for some gpu configurations.
       volumes:
         - /tmp/.X11-unix:/tmp/.X11-unix:rw # x server related
-        - $HOME:/home/ubuntu:rw
+        - $HOME:/home/shared:rw
       stdin_open: true
       tty: true
       command: /bin/bash
