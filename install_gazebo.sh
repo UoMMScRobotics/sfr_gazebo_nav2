@@ -12,7 +12,7 @@ sudo apt-get update
 sudo apt-get install -y gz-harmonic
 
 # Install pairing ROS pairing libraries
-sudo apt-get install ros-jazzy-ros-gz
+sudo apt-get install -y ros-jazzy-ros-gz
 
 # Remove APT files
 rm -rf /var/cache/apt/archives /var/lib/apt/lists/*
