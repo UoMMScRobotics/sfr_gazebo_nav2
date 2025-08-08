@@ -7,7 +7,6 @@ services:
       volumes:
         - /tmp/.X11-unix:/tmp/.X11-unix:rw # x server related
         - $HOME:/home/shared:rw
-      user: ${CURRENT_UID}
       stdin_open: true
       tty: true
       command: /bin/bash
