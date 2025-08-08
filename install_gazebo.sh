@@ -14,6 +14,22 @@ sudo apt-get install -y gz-harmonic
 ## Install pairing ROS pairing libraries
 sudo apt-get install -y ros-jazzy-ros-gz
 
+## Create ros2_tutorial_workspace external if needed
+mkdir -p "$HOME"/ros2_tutorial_workspace/src/external
+
+## Add ros_gz_project_template
+
+### Add env
+echo "# Add GZ_VERSION for ros_gz_project_template" > "$HOME"/.bashrc
+echo "export GZ_VERSION=harmonic" > "$HOME"/.bashrc
+
+### Clone and build
+export GZ_VERSION=harmonic
+cd "$HOME"/ros2_tutorial_workspace/src/external
+git clone --depth 1 https://github.com/gazebosim/ros_gz_project_template.git
+source /opt/ros/jazzy/setup.bash
+colcon build
+
 # Install nav2 (https://docs.nav2.org/getting_started/index.html)
 sudo apt-get install -y ros-jazzy-navigation2
 sudo apt-get install -y ros-jazzy-nav2-bringup
