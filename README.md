@@ -1,4 +1,4 @@
-# SFR Gazebo
+# Docker Image for Gazebo and nav2 Used in Software for Robotics
 
 > [!IMPORTANT]
 > Remember to install `docker` and `curl`.
@@ -6,6 +6,8 @@
 > - Docker: https://ros2-tutorial.readthedocs.io/en/latest/docker/index.html
 > 
 > - curl `sudo apt-get install curl`
+
+See: https://ros2-tutorial.readthedocs.io/en/latest/gazebo/installation.html
 
 ## Recommended command
 
