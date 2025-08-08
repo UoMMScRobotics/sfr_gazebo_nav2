@@ -12,10 +12,10 @@ See: https://ros2-tutorial.readthedocs.io/en/latest/gazebo/installation.html
 ## Recommended command
 
 ```commandline
-mkdir -p ~/docker/SFR_Gazebo
-cd ~/docker/SFR_Gazebo
-curl -O https://raw.githubusercontent.com/UoMMScRobotics/SFR_Gazebo/refs/heads/main/compose.yml
-xhost +
+mkdir -p ~/docker/sfr/gazebo_nav2
+cd ~/sfr/gazebo_nav2
+curl -O https://raw.githubusercontent.com/UoMMScRobotics/sfr_gazebo_nav2/refs/heads/main/compose.yml
+export CURRENT_UID=$(id -u):$(id -g)
 docker compose down --remove-orphans
 docker compose pull
 docker compose run gazebo "gz sim"
