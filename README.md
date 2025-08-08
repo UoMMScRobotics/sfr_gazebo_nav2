@@ -2,10 +2,12 @@
 
 > [!IMPORTANT]
 > Remember to install `docker` and `curl`.
-> Docker: https://ros2-tutorial.readthedocs.io/en/latest/docker/index.html
-> `sudo apt-get install curl`
+> 
+> - Docker: https://ros2-tutorial.readthedocs.io/en/latest/docker/index.html
+> 
+> - curl `sudo apt-get install curl`
 
-Recommended command to prevent inaccessible containers.
+## Recommended command
 
 ```commandline
 mkdir -p ~/docker/SFR_Gazebo
