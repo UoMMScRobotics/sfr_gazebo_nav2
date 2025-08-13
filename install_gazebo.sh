@@ -33,6 +33,9 @@ sudo apt-get install -y ros-jazzy-navigation2
 sudo apt-get install -y ros-jazzy-nav2-bringup
 sudo apt-get install -y ros-jazzy-nav2-minimal-tb*
 
+# Install MoveIt 2 (https://moveit.ai/install-moveit2/binary/)
+sudo apt-get install -y ros-jazzy-moveit
+
 # Remove APT files
 rm -rf /var/cache/apt/archives /var/lib/apt/lists/*
 
