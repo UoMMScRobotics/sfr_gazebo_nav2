@@ -31,8 +31,9 @@ sudo apt-get install -y ros-jazzy-nav2-minimal-tb*
 sudo apt-get install -y ros-jazzy-moveit
 
 ## Clone moveit tutorials. There's currently no "jazzy" branch (https://github.com/moveit/moveit2_tutorials/issues/1033)
-cd "$HOME"/ros2_tutorial_workspace/src/external
-git clone -b main https://github.com/moveit/moveit2_tutorials
+# Not compatible with their own binaries. Needs build from source. Compilation error on arm64.
+# cd "$HOME"/ros2_tutorial_workspace/src/external
+# git clone -b main https://github.com/moveit/moveit2_tutorials
 
 # Build external examples
 source /opt/ros/jazzy/setup.bash
