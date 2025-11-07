@@ -27,14 +27,6 @@ sudo apt-get install -y ros-jazzy-navigation2
 sudo apt-get install -y ros-jazzy-nav2-bringup
 sudo apt-get install -y ros-jazzy-nav2-minimal-tb*
 
-# Install MoveIt 2 (https://moveit.ai/install-moveit2/binary/)
-sudo apt-get install -y ros-jazzy-moveit
-
-## Clone moveit tutorials. There's currently no "jazzy" branch (https://github.com/moveit/moveit2_tutorials/issues/1033)
-# Not compatible with their own binaries. Needs build from source. Compilation error on arm64.
-# cd "$HOME"/ros2_tutorial_workspace/src/external
-# git clone -b main https://github.com/moveit/moveit2_tutorials
-
 # Build external examples
 source /opt/ros/jazzy/setup.bash
 cd "$HOME"/ros2_tutorial_workspace
