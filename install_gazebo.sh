@@ -1,8 +1,11 @@
 #!/bin/bash
 set -e
 
-# https://gazebosim.org/docs/harmonic/install_ubuntu/
+# Update and upgrade apt-get
 sudo apt-get update
+sudo apt-get upgrade -y
+
+# https://gazebosim.org/docs/harmonic/install_ubuntu/
 sudo apt-get install -y curl lsb-release gnupg
 
 # Install gazebo harmonic (https://gazebosim.org/docs/harmonic/install/)
