@@ -11,14 +11,14 @@ sudo apt-get install -y ros-jazzy-nav2-bringup
 sudo apt-get install -y ros-jazzy-nav2-minimal-tb*
 
 # (https://docs.nav2.org/setup_guides/urdf/setup_urdf.html)
-sudo apt-get install -y ros-jazzy-joint-state-publisher-gui
-sudo apt-get install -y ros-jazzy-xacro
+# sudo apt-get install -y ros-jazzy-joint-state-publisher-gui
+# sudo apt-get install -y ros-jazzy-xacro
 
 # (https://docs.nav2.org/setup_guides/sensors/mapping_localization.html)
 sudo apt-get install -y ros-jazzy-slam-toolbox
 
 # Install the sdf-urdf converter (https://docs.nav2.org/setup_guides/sdf/setup_sdf.html)
-sudo apt-get install -y ros-jazzy-sdformat-urdf
+# sudo apt-get install -y ros-jazzy-sdformat-urdf
 
 # Remove APT files
 rm -rf /var/cache/apt/archives /var/lib/apt/lists/*
