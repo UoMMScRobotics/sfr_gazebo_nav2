@@ -10,7 +10,7 @@
 ## Gazebo 
 
 > [!NOTE]
-> See: https://ros2-tutorial.readthedocs.io/en/latest/gazebo/installation.html
+> See: https://ros2-tutorial.readthedocs.io/en/latest/gazebo/index.html
 
 ```commandline
 mkdir -p ~/docker/sfr/gazebo_nav2
@@ -25,7 +25,7 @@ docker compose run gazebo "gz sim"
 ## Navigation
 
 > [!NOTE]
-> See: https://ros2-tutorial.readthedocs.io/en/latest/gazebo/installation.html
+> See: https://ros2-tutorial.readthedocs.io/en/latest/navigation/index.html
 
 
 ```commandline
@@ -35,7 +35,7 @@ curl -O https://raw.githubusercontent.com/UoMMScRobotics/sfr_gazebo_nav2/refs/he
 xhost +
 docker compose down --remove-orphans
 docker compose pull
-docker compose run gazebo "ros2 launch nav2_bringup tb3_simulation_launch.py slam:=True"
+docker compose run gazebo "source /opt/ros/jazzy/setup.bash && ros2 launch nav2_bringup tb3_simulation_launch.py slam:=True"
 ```
 
 ## Notes
