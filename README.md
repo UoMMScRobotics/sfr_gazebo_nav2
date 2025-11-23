@@ -7,10 +7,10 @@
 > 
 > - curl `sudo apt-get install curl`
 
-## Gazebo 
+## Download or update compose file
 
-> [!NOTE]
-> See: https://ros2-tutorial.readthedocs.io/en/latest/gazebo/index.html
+You can also prefix any execution with this command to make sure everything is up to date.
+
 
 ```commandline
 mkdir -p ~/docker/sfr/gazebo_nav2
@@ -19,6 +19,17 @@ curl -O https://raw.githubusercontent.com/UoMMScRobotics/sfr_gazebo_nav2/refs/he
 xhost +
 docker compose down --remove-orphans
 docker compose pull
+```
+
+
+## Gazebo 
+
+> [!NOTE]
+> See: https://ros2-tutorial.readthedocs.io/en/latest/gazebo/index.html
+
+```commandline
+cd ~/docker/sfr/gazebo_nav2
+docker compose down --remove-orphans
 docker compose run gazebo "gz sim"
 ```
 
@@ -27,15 +38,20 @@ docker compose run gazebo "gz sim"
 > [!NOTE]
 > See: https://ros2-tutorial.readthedocs.io/en/latest/navigation/index.html
 
+### Example with Gazebo
 
 ```commandline
-mkdir -p ~/docker/sfr/gazebo_nav2
 cd ~/docker/sfr/gazebo_nav2
-curl -O https://raw.githubusercontent.com/UoMMScRobotics/sfr_gazebo_nav2/refs/heads/main/compose.yml
-xhost +
 docker compose down --remove-orphans
-docker compose pull
-docker compose run gazebo "source /opt/ros/jazzy/setup.bash && ros2 launch nav2_bringup tb3_simulation_launch.py slam:=True"
+docker compose run gazebo "source /opt/ros/jazzy/setup.bash && ros2 launch nav2_bringup tb3_simulation_launch.py headless:=False sigterm_timeout:=120"
+```
+
+### Example with SLAM
+
+```commandline
+cd ~/docker/sfr/gazebo_nav2
+docker compose down --remove-orphans
+docker compose run gazebo "source /opt/ros/jazzy/setup.bash && ros2 launch nav2_bringup tb3_simulation_launch.py slam:=True sigterm_timeout:=120"
 ```
 
 ## Notes
