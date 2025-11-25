@@ -43,7 +43,11 @@ docker compose run gazebo "gz sim"
 ```commandline
 cd ~/docker/sfr/gazebo_nav2
 docker compose down --remove-orphans
-docker compose run gazebo "source /opt/ros/jazzy/setup.bash && ros2 launch nav2_bringup tb3_simulation_launch.py headless:=False sigterm_timeout:=120"
+docker compose run gazebo \
+"source /opt/ros/jazzy/setup.bash && \
+ros2 launch nav2_bringup tb3_simulation_launch.py \
+headless:=False \
+sigterm_timeout:=120"
 ```
 
 ### Example with SLAM
@@ -51,7 +55,12 @@ docker compose run gazebo "source /opt/ros/jazzy/setup.bash && ros2 launch nav2_
 ```commandline
 cd ~/docker/sfr/gazebo_nav2
 docker compose down --remove-orphans
-docker compose run gazebo "source /opt/ros/jazzy/setup.bash && ros2 launch nav2_bringup tb3_simulation_launch.py slam:=True sigterm_timeout:=120"
+docker compose run gazebo \
+"source /opt/ros/jazzy/setup.bash && \
+ros2 launch nav2_bringup tb3_simulation_launch.py \
+headless:=False \
+slam:=True \
+sigterm_timeout:=120"
 ```
 
 ## Notes
