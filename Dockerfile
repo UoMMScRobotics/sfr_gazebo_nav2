@@ -7,3 +7,5 @@ RUN wget https://raw.githubusercontent.com/UoMMScRobotics/SFR_Gazebo/refs/heads/
 RUN chmod +x install_gazebo.sh && bash -c "./install_gazebo.sh"
 RUN wget https://raw.githubusercontent.com/UoMMScRobotics/SFR_Gazebo/refs/heads/main/install_nav2.sh 
 RUN chmod +x install_nav2.sh && bash -c "./install_nav2.sh"
+RUN wget https://raw.githubusercontent.com/UoMMScRobotics/SFR_Gazebo/refs/heads/main/install_age.sh 
+RUN chmod +x install_age.sh && bash -c "./install_age.sh"
