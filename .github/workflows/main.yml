@@ -10,6 +10,7 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: uommscrobotics/sfr_gazebo_nav2
   BUILDX_NO_DEFAULT_ATTESTATIONS: 1 # https://github.com/orgs/community/discussions/45969
+  DOCKERFILE_PERMALINK: https://raw.githubusercontent.com/mmmarinho/ROS2_Tutorial/refs/heads/main/docker/gazebo_nav2/Dockerfile
 
 jobs:
   build-and-push-image:
@@ -24,8 +25,11 @@ jobs:
       attestations: write
       id-token: write
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      #- name: Checkout repository
+      #  uses: actions/checkout@v4
+
+      - name: Download Dockerfile
+        run: wget ${{ env.DOCKERFILE_PERMALINK }}
 
       - name: Log in to the Container registry
         uses: docker/login-action@v3
